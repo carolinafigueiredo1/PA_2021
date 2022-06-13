@@ -1,0 +1,23 @@
+// {type:state}
+// {direction:leftToRight}
+// {generate:true}
+(Inicio)[comeca]->(AguardaJogada)
+(Inicio)[reinicia]->(Inicio)
+(Inicio)[continuaJogo]->(AguardaJogada)
+(AguardaJogada)[joga]->(AguardaJogada)
+(AguardaJogada)[decidirPeca]->(AguardaDecisaoPeca)
+(AguardaJogada)[avancaMiniJogo]->(AguardaMiniJogo)
+(AguardaJogada)[mudaTurno]->(AguardaJogada)
+(AguardaJogada)[continuarJogo]->(AguardaJogada)
+(AguardaJogada)[usaPeca]->(AguardaJogada)
+(AguardaJogada)[reinicia]->(AguardaJogada)
+(AguardaMiniJogo)[iniciaMiniJogo]->(AguardaMiniJogo)
+(AguardaMiniJogo)[jogaMJ]->(AguardaJogada)
+(AguardaJogada)[joga]->(AguardaDecisaoFinal)
+(AguardaDecisaoFinal)[reinicia]->(Inicio)
+(AguardaJogada)[sair]->(end)
+(AguardaMiniJogo)[sair]->(end)
+(AguardaDecisaoMJ)[sair]->(end)
+(AguardaDecisaoFinal)[sair]->(end)
+
+
